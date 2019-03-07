@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <com.q42.android.scrollingimageview.ScrollingImageView
+        android:id="@+id/scrolling_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        scrolling_image_view:speed="0.5dp"
+        scrolling_image_view:src="@drawable/scroll_home" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/rounded_corners"
+        android:text="Query Form"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/stateField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignLeft="@+id/state"
+        android:background="@drawable/rounded_corners"
+        android:text="State"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/stateField"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:focusable="false"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/districtField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/state"
+        android:layout_alignLeft="@+id/district"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corners"
+        android:text="District"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/district"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/districtField"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:focusable="false"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/cropField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/district"
+        android:layout_alignLeft="@+id/crop"
+        android:background="@drawable/rounded_corners"
+        android:layout_marginTop="20dp"
+        android:text="Crop"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/crop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cropField"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Optional"
+        android:textSize="28sp" />
+
+
+    <TextView
+        android:id="@+id/areaField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crop"
+        android:layout_alignLeft="@+id/area"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corners"
+        android:text="Area"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/areaField"
+        android:layout_centerHorizontal="true"
+        android:cursorVisible="false"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:hint="acres"
+        android:inputType="number"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/soilField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_alignLeft="@+id/soil"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corners"
+        android:text="Soil"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/soil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soilField"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners"
+        android:focusable="false"
+        android:ems="10"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soil"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="28sp"
+        android:text="Submit" />
+
+</RelativeLayout>
